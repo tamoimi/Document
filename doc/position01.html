@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션01 - 기초편</title>
+    <style>
+        /*position: static; 포지션이 아니게 한다.
+          position: absolute; 좌표를 가진다. top,left,bottom,right;
+          positon: relative; 기준이 된다, 좌표를 가진다, 떠오르지 않고 공간을 차지한다, 쪼그라들지 않는다.
+          position: fixed; 화면을 기준으로 떠오른다, 좌표를 가진다.*/
+        
+          body {
+              background-color: yellow;
+          }
+          .Wrap {
+              position: relative;
+              margin: 200px;
+              width: 400px;
+              height: 300px;
+              background-color: #444;
+          }
+          .contentWrap {
+              margin: 400px;
+              width: 1000px;
+              height: 300px;
+              background: #369;
+          }
+        
+          .absolute {
+              position: absolute;
+              top: 100px;
+              right: 100px;
+              background-color: red;}
+
+          .fixed {
+              position:fixed;
+              top: 100px;
+              right: 100px;
+              background: #336 336px;
+            }
+            .popup {
+                position: absolute;
+                top:50% ;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 999;
+
+            }
+            .popup2 {
+                position: absolute;
+                top:40% ;
+                left: 40%;
+                transform: translate(-50%,-50%);
+                z-index: 3;
+                
+            }
+    </style>
+</head>
+<body>
+    <div class="Wrap">
+    <section class="contentWrap">
+    <div class="absolute">
+        AB
+    </div>
+    <div class="fixed">
+        FX
+    </div>
+    </section>
+</div>
+
+<div class="popup">
+    <figure>
+        <img src="./img/menu_n01.jpg" alt="">
+    </figure>
+</div>
+
+<div class="popup2">
+    <figure>
+        <img src="./img/menu_n02.jpg" alt="">
+    </figure>
+</div>
+
+    
+</body>
+</html>
