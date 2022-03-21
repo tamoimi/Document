@@ -122,9 +122,7 @@
 }
 /* header : Kim 2022.03.17 최종수정} */
 
-.mainVisual .visualSlide {
-    border-top: 1px solid #ddd;
-}
+.mainVisual .visualSlide {}
 
 .mainVisual .visualSlide figure {
     position: relative;
