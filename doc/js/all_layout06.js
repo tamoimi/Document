@@ -63,6 +63,38 @@ function topBannerHandler() {
         $('.aproductSlide').slick('slickNext')
     });
 
+     
+
+
+    //유투브 플레이어를 쓰는방법//
+
+    $("#bgndVideo").YTPlayer({
+    videoURL:'https://youtu.be/4Ps6nV4wiCE',
+    containment:'.movieBg',
+    autoPlay: true, 
+    mute: true,
+    startAt: 0, 
+    opacity: 1,
+    showControls: false,
+    playOnlyIfVisible :true
+    });
+
+    $('.movieBg i:first-child').on('click', function(){
+     $("#bgndVideo").YTPPause();
+    });
+
+    $('.movieBg i:last-child').on('click', function(){
+     $("#bgndVideo").YTPPlay();
+    });
+
+    $('.tapMenu li').on('click', function () {
+        var idx = $(this).index();
+        $(this).addClass('oo').siblings().removeClass('oo');
+        $('.tapContent>div').eq(idx).addClass('oo').siblings().removeClass('oo');
+    });
+
+
+
 
     ///////////////////////////////
 })
