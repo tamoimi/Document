@@ -4,7 +4,7 @@
 
 .topBanner {
     padding: 24px 0;
-    background: #f3f3f3;
+    background: #004236;
 }
 .topBanner .container {
     position: relative;
@@ -17,17 +17,19 @@
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 0.040em;
+    color: #fff;
 }
 .topBanner .container p {
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.025em;
+    color: #fff;
 }
 .topBanner .container a {
     margin-left: 20px;
     padding: 3px 20px;
-    border: 1px solid #333;
+    border: 1px solid #fff;
     font-size: 13px;
     font-weight: 300;
 }
@@ -37,6 +39,7 @@
     right: 15px;
     font-size: 24px;
     cursor: pointer;
+    color: #fff;
 }
 
 /* topBanner : Kim 2022.03.17 최종수정} */
@@ -44,7 +47,9 @@
 
 /* { header : Kim 2022.03.17 최종수정 */
 
-.headerWrap {}
+.headerWrap {
+    background: #3a857e;
+}
 
 .headerWrap .container {
     display: flex;
@@ -61,7 +66,8 @@
     margin-left: auto;
 }
 
-.gnb {}
+.gnb {
+}
 
 .gnb>ul {
     display: flex;   
@@ -131,7 +137,7 @@
     right: 200px;
 
     font-size: 100px;
-    color: #f00;
+    color: #fff;
 
     opacity: 0;
     transition: 0.5s;
@@ -139,9 +145,9 @@
 
 .mainVisual .visualSlide figure.oo i {
     opacity: 1;
-    animation: heart 1s infinite;
+    animation: star 1s infinite;
 }
-@keyframes heart {
+@keyframes star {
     0% {transform: scale(1);}
     20% {transform: scale(0.5);}
     50% {transform: scale(1);}
@@ -155,26 +161,26 @@
     left: 200px;
     z-index: 999;
 
-    border-top: 100px solid #fff;
-    border-left: 100px solid transparent;
+    border-top: 40px solid #fff;
+    border-left: 40px solid transparent;
 
     transform: translateY(-50%) rotate(-135deg);
 }
 
 .mainVisual .visualSlide .msLeft.oo {
-    border-top: 100px solid #333;
+    border-top: 40px solid #fff;
 }
 .mainVisual .visualSlide .msRight {
     position: absolute;
     top: 50%;
-    right: 200px;
-    width: 200px;
-    height: 200px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
 
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-top: 40px solid #fff;
+    border-left: 40px solid transparent;
 
-    transform: translateY(-50%) rotate(135deg) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .mainVisual .visualSlide figure .inner {
@@ -184,7 +190,7 @@
     color: #fff;
 }
 .mainVisual .visualSlide figure.itm02 .inner {
-    color: #333;
+    color: #004236;
 }
 
 .mainVisual .visualSlide figure .inner h3 {
@@ -215,13 +221,13 @@
 }
 
 .mainVisual .visualSlide .itm01 {
-    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+    background: url(../images/tbs01.jpg) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm02 {
-    background: url(../images/mainvisual02.jpg) no-repeat center center/cover;
+    background: url(../images/tbs02.jpg) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm03 {
-    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+    background: url(../images/tbs01.jpg) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .slick-dots {
     position: absolute;
@@ -243,7 +249,7 @@
     display: block;
     width: 0%;
     height: 100%;
-    background: #f00;
+    background: rgb(58, 133, 126);
 }
 
 .mainVisual .visualSlide .slick-dots li.slick-active::after {
@@ -292,11 +298,12 @@
 .mainProduct .container figure strong {
     display: block;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .mainProduct .container figure a {
     display: inline-block;
     padding: 10px 30px;
-    background: #333;
+    background: #004236;
     color: #fff;
 }
 /* 호버 이용해서 커서 할때 색 바꾸고 이미지 크기 조정 */
@@ -334,8 +341,8 @@
 }
 
 .eventBanner {
-    padding: 100px 0;
-    background: url(../images/mainvisual03.jpg) no-repeat fixed center center/cover;
+    padding: 140px 0;
+    background: url(../images/middle01.jpg) no-repeat fixed center center/cover;
     text-align: center;
     color: #fff;
     filter: grayscale(1);
@@ -399,7 +406,7 @@
 }
 .eventProduct i {
     padding: 13px;
-    background: #333;
+    background: #004236;
     color: #fff;
     border-radius: 7px;
     margin-left: 0 5px;
@@ -431,6 +438,7 @@
 }
 .allProduct .aproductSlide figure {
     padding: 0 15px;
+    margin-bottom: 15px;
 }
 .allProduct .inner {
     margin-bottom: 20px;
@@ -454,7 +462,7 @@
     border-radius: 50%;
 }
 .allProduct .slick-dots li.slick-active {
-    background: #f00;
+    background: #3a857e;
 }
 .allProduct .slick-dots li button {
     display: none;
@@ -468,7 +476,7 @@
     padding: 10px;
     font-size: 30px;
     color: #fff;
-    background: #333;
+    background: #004236;
 }
 .allProduct i:first-child {
     margin-left: -700px;
@@ -531,8 +539,8 @@
     left: 50%;
     transform: translate(-50%,-50%);
 
-    background: yellowgreen;
-    border: 3px solid yellowgreen;
+    background: #004236;
+    border: 3px solid #004236;
     padding: 15px 30px;
     border-radius: 10px;
     color: white;
@@ -540,9 +548,9 @@
 }
 .customerArea .container>div .btn:hover {
     background: white;
-    border: 3px solid yellowgreen;
+    border: 3px solid #3a857e;
     border-radius: 30px;
-    color: yellowgreen;
+    color: #3a857e;
 }
 .customerArea .container>div img {
     filter: grayscale(1);
@@ -565,7 +573,7 @@
     cursor: pointer;
 }
 .customerArea .tapMenu>li.oo {
-    background-color: #369;
+    background-color: #3a857e;
 }
 
 .customerArea .tapMenu>li~li {
@@ -591,13 +599,27 @@
     overflow: hidden;
 }
 
+.bottom i {
+    position: absolute;
+    top: 10px;
+    right: 60px;
 
+    font-size: 100px;
+    color: #fff;
 
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
 
-
-
-
-
-
-
-
+.bottom i {
+    opacity: 1;
+    animation: star 1s infinite;
+}
+@keyframes star {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.5);}
+    50% {transform: scale(1);}
+    70% {transform: scale(0.5);}
+    100% {transform: scale(1);} 
+}
