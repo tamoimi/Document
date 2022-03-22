@@ -93,15 +93,16 @@
 }
 
 .headerWrap .searchForm input[type="search"] {
-    padding: 3px 0;
+    padding: 3px 4px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #333;
+    /* border-bottom: 1px solid #333; */
+    border-radius: 6px;
 }
 
 .headerWrap .searchForm input[type="search"]::placeholder {
     color: rgb(107, 107, 107);
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .headerWrap .searchForm input[type="search"]:focus::placeholder {
@@ -171,7 +172,7 @@
 .mainVisual .visualSlide .msRight {
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 200px;
     width: 40px;
     height: 40px;
 
@@ -265,7 +266,7 @@
 
 
 .mainProduct {
-    padding: 100px 0;
+    padding: 80px 0;
     text-align: center;
 }
 .mainProduct h2 {
@@ -278,7 +279,7 @@
     font-size: 15px;
     font-weight: 300;
     letter-spacing: -0.025em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .mainProduct .container {
     display: flex;
@@ -324,15 +325,16 @@
     top: -10px;
     right: 0px;
 
-    border-top: 10px solid #f00;
-    border-left: 50px solid #f00;
-    border-bottom: 10px solid #f00;
+    border-top: 10px solid #3a857e;
+    border-left: 50px solid #3a857e;
+    border-bottom: 10px solid #3a857e;
     border-right: 10px solid transparent;
 }
 .mainProduct .container figure .label span {
     position: absolute;
-    top: -6px;
-    left: -45px;
+    top: -7px;
+    left: -42px;
+    text-shadow: #fff 1px 0 10px;
     color: #fff;
 
     font-size: 14px;
@@ -365,20 +367,23 @@
 }
 
 .eventProduct {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .eventProduct .container {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    /* gap: 10%; */
+    text-align: center;
 }
 .eventProduct .container>div {
     padding: 0 15px;
+    justify-content: center;
     text-align: center;
 }
 .eventProduct .left {
-    width: 40%;
+    width: 30%;
 }
 .eventProduct .eProductSlide {
     padding: 5px;
@@ -388,7 +393,7 @@
     display: flex;
     align-items: center;
 
-    width: 60%;
+    width: 70%;
 }
 .eventProduct h3 {
     font-size: 19px;
@@ -412,9 +417,9 @@
 
 .allProduct {
     position: relative;
-    padding: 100px 0;
+    padding: 80px 0;
     text-align: center;
-    background: #f2f2f2;
+    background: rgba(247,243,232,255);
 }
 
 .allProduct h2 {
@@ -446,7 +451,8 @@
     margin-bottom: 20px;
 
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 700;
+    color: #004236;
 }
 .allProduct .slick-dots {
     display: flex;
@@ -475,6 +481,7 @@
     font-size: 30px;
     color: #fff;
     background: #004236;
+    border-radius: 50%;
 }
 .allProduct i:first-child {
     margin-left: -700px;
@@ -493,7 +500,7 @@
 
 .movieBg {
     position: relative;
-    padding: 100px 0;
+    padding: 180px 0;
     text-align: center;
     background: #f2f2f2;
 }
@@ -621,3 +628,98 @@
     70% {transform: scale(0.5);}
     100% {transform: scale(1);} 
 }
+
+
+/* {outline: 1px solid;} */
+
+.footerWrap {
+    background: #004236;
+    color: #fff;
+    line-height: 40px;
+}
+.footerWrap .top {
+    /* border-bottom: 1px solid #666; */
+}
+.footerWrap .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-style: none;
+}
+.footerWrap .container>dl {
+    display: flex;
+    padding: 0 15px;
+    gap: 40px;
+}
+.footerWrap .container dd {
+    position: relative;
+}
+.footerWrap .container dd::before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: -20%;
+
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #f2f2f2;
+
+    transform: translateY(-50%);
+}
+.footerWrap .container>div {
+    padding: 0 15px;
+    font-size: 20px;
+}
+.footerWrap .container address {
+    line-height: 24px;
+    font-size: 12px;
+    font-style: normal;
+}
+.footerWrap .bottom {
+    padding-bottom: 30px;
+}
+
+.footerWrap .container>* {
+    padding: 0 15px;
+}
+.footerWrap .link select {
+    background: #3a857e;
+    font-size: 15px;
+    padding: 4px 10px;
+    outline: none;
+    border: 1px solid #f2f2f2;
+}
+.popup01 {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #333;
+    padding: 30px;
+    background: rgba(0,0,0,0.5);
+}
+.popup01 .logo {
+    position: absolute;
+    top: 6px;
+    left: 18%;
+    color: #f2f2f2;
+    text-shadow: rgb(240, 238, 230) 1px 0 10px;
+}
+.popup01 img {
+    width: 400px;
+}
+
+.popup01 button {
+    position: absolute;
+    inset: auto 20px 20px auto;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #333;
+    background: #004236;
+    color: #fff;
+    font-size: 14px;
+}
+
