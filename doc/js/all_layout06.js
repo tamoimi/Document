@@ -1,11 +1,11 @@
-$(function(){
-////////////////////////////////////
+$(function () {
+    ////////////////////////////////////
 
-// topBanner : Kim 2022.03.17 수정
-function topBannerHandler() {
-   // $('topBanner').hide(); //display:none;
-    $('.topBanner').slideUp();
-}
+    // topBanner : Kim 2022.03.17 수정
+    function topBannerHandler() {
+        // $('topBanner').hide(); //display:none;
+        $('.topBanner').slideUp();
+    }
     $('.topBanner .container i').on('click', topBannerHandler);
 
     $('.visualSlide').slick({
@@ -15,14 +15,14 @@ function topBannerHandler() {
         dots: true,
         prevArrow: '<div class="msLeft"></div>',
         nextArrow: '<div class="msRight"></div>'
-     });
-    
-     // 슬라이드에 애니메이션 주기
+    });
 
-     $('.visualSlide figure').eq(1).addClass('oo');
-     $('.visualSlide').on('afterChange', function(e,s,c){
-        $('.visualSlide figure').eq(c+1).addClass('oo').siblings().removeClass('oo');
-        if (c===1) {
+    // 슬라이드에 애니메이션 주기
+
+    $('.visualSlide figure').eq(1).addClass('oo');
+    $('.visualSlide').on('afterChange', function (e, s, c) {
+        $('.visualSlide figure').eq(c + 1).addClass('oo').siblings().removeClass('oo');
+        if (c === 1) {
             $('.msLeft').addClass('oo')
         } else {
             $('.msLeft').removeClass('oo')
@@ -37,11 +37,11 @@ function topBannerHandler() {
         autoplaySpeed: 1000,
     });
 
-    $('.eventProduct i:nth-of-type(1)').on('click', function(){
+    $('.eventProduct i:nth-of-type(1)').on('click', function () {
         $('.eProductSlide').slick('slickPause')
     });
 
-    $('.eventProduct i:nth-of-type(2)').on('click', function(){
+    $('.eventProduct i:nth-of-type(2)').on('click', function () {
         $('.eProductSlide').slick('slickPlay')
     });
 
@@ -55,42 +55,56 @@ function topBannerHandler() {
     });
 
 
-    $('.allProduct i:first-child').on('click', function(){
+    $('.allProduct i:first-child').on('click', function () {
         $('.aproductSlide').slick('slickPrev')
     })
-    
-    $('.allProduct i:last-child').on('click', function(){
+
+    $('.allProduct i:last-child').on('click', function () {
         $('.aproductSlide').slick('slickNext')
     });
 
-     
+
 
 
     //유투브 플레이어를 쓰는방법//
 
     $("#bgndVideo").YTPlayer({
-    videoURL:'https://youtu.be/4Ps6nV4wiCE',
-    containment:'.movieBg',
-    autoPlay: true, 
-    mute: true,
-    startAt: 0, 
-    opacity: 1,
-    showControls: false,
-    playOnlyIfVisible :true
+        videoURL: 'https://youtu.be/4Ps6nV4wiCE',
+        containment: '.movieBg',
+        autoPlay: true,
+        mute: true,
+        startAt: 0,
+        opacity: 1,
+        showControls: false,
+        playOnlyIfVisible: true
     });
 
-    $('.movieBg i:first-child').on('click', function(){
-     $("#bgndVideo").YTPPause();
+    $('.movieBg i:first-child').on('click', function () {
+        $("#bgndVideo").YTPPause();
     });
 
-    $('.movieBg i:last-child').on('click', function(){
-     $("#bgndVideo").YTPPlay();
+    $('.movieBg i:last-child').on('click', function () {
+        $("#bgndVideo").YTPPlay();
     });
 
     $('.tapMenu li').on('click', function () {
         var idx = $(this).index();
         $(this).addClass('oo').siblings().removeClass('oo');
         $('.tapContent>div').eq(idx).addClass('oo').siblings().removeClass('oo');
+    });
+
+    // link
+
+    $('#link').on('change', function () {
+        let linkSite = $(this).val();
+        if (!linkSite) return;
+        window.open(linkSite)
+    });
+
+
+    $('.popup01 button').on('click', function () {
+        $(this).parent().hide();
+
     });
 
 
