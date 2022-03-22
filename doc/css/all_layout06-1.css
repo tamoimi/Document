@@ -630,8 +630,6 @@
 }
 
 
-/* {outline: 1px solid;} */
-
 .footerWrap {
     background: #004236;
     color: #fff;
@@ -703,7 +701,7 @@
 .popup01 .logo {
     position: absolute;
     top: 6px;
-    left: 18%;
+    left: 22%;
     color: #f2f2f2;
     text-shadow: rgb(240, 238, 230) 1px 0 10px;
 }
@@ -722,4 +720,4 @@
     color: #fff;
     font-size: 14px;
 }
-
+/* {outline: 1px solid;} */
