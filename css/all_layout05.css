@@ -1,0 +1,51 @@
+.headerWrap {
+    display: none;
+    background: rgb(202, 163, 32);
+    color: #fff;
+    padding: 50px 0;
+}
+.icon {
+    position: absolute;
+    width: 1200px;
+    text-align: right;
+}
+.headerWrap .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.tabMeun {
+    padding: 100px 0;
+    background: #f2f2f2;
+}
+.tabMeun .container {
+    width: 600px;
+    margin: 0 auto;
+}
+.tabMeun .tabLink {
+    display: flex;
+}
+.tabMeun .tabLink li {
+    flex: 1;
+}
+.tabMeun .tabLink li.active {
+    color: rgb(202, 163, 32);
+}
+.tabMeun .tabContent>div {
+    display: none;
+}
+.tabMeun .tabContent>div.active {
+    display: block;
+}
+
+.bgFixed {
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+    background:url(../img/tulip.jpg) no-repeat fixed center center/cover;
+}
+.bgFixed h2 {
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 3em;
+    margin-bottom: 30px;
+}
