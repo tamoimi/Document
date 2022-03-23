@@ -223,13 +223,13 @@
 }
 
 .mainVisual .visualSlide .itm01 {
-    background: url(../images/riseup_01.png) no-repeat center center/cover;
+    background: url(../img/riseup_01.png) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm02 {
-    background: url(../images/tbs02.jpg) no-repeat center center/cover;
+    background: url(../img/tbs02.jpg) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .itm03 {
-    background: url(../images/image001.jpg) no-repeat center center/cover;
+    background: url(../img/image001.jpg) no-repeat center center/cover;
 }
 .mainVisual .visualSlide .slick-dots {
     position: absolute;
@@ -345,7 +345,7 @@
 
 .eventBanner {
     padding: 140px 0;
-    background: url(../images/shampoo01.jpg) no-repeat fixed center center/cover;
+    background: url(../img/shampoo01.jpg) no-repeat fixed center center/cover;
     text-align: center;
     color: #fff;
     filter: grayscale(1);
