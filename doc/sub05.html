@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본으로 돌아가기 05</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        header {
+            background: #004236;
+            height: 100px;
+        }
+
+        .logo {
+            position: relative;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .subPage .hospitalContent {
+            padding: 100px 0;
+            letter-spacing: -0.025em;
+        }
+
+        .subPage .hospitalContent h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .subPage .hospitalContent span {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 20px 0;
+            color: #4dc094;
+        }
+
+        .subPage .hospitalContent h2::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4dc094;
+            transform: translate(-10px, -15px);
+        }
+
+        .subPage .hospitalContent h2::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4dc094;
+            transform: translate(10px, -15px);
+        }
+
+        .subPage .hospitalContent>p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 0.020em;
+        }
+
+        .subPage .hospitalContent .container {
+            display: flex;
+            flex-flow: wrap;
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .subPage .hospitalContent .container .top {
+            display: flex;
+            width: 100%;
+            margin: 0 0 50px 0;
+        }
+
+        .subPage .hospitalContent .container .left {
+            width: 50%;
+        }
+
+        .subPage .hospitalContent .container .right {
+            width: 50%;
+        }
+
+        .subPage .hospitalContent figure {
+            position: relative;
+            flex: 1;
+            height: 500px;
+            overflow: hidden;
+        }
+
+
+        .subPage .hospitalContent figure:nth-child(1) {
+            background: url(../img/middle01.jpg)no-repeat 10% center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(2) {
+            background: url(../img/popup01.jpg)no-repeat right center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(3) {
+            background: url(../img/riseup_01.png)no-repeat 40% center/cover;
+        }
+
+        .subPage .hospitalContent figure:nth-child(4) {
+            background: url(../img/tbs02.jpg)no-repeat 60% center/cover;
+        }
+
+        .subPage .hospitalContent figure .inner {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 30px 20px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .subPage .hospitalContent figure.on .inner {
+            left: 0
+        }
+
+        .subPage .hospitalContent figure .inner h3 {
+            font-size: 20px;
+            font-size: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 0 0 20px 0;
+            margin: 0 0 30px 0;
+
+        }
+
+        .subPage .hospitalContent figure .inner p {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .subPage .hospitalContent figure a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            padding: 10px;
+            /* background: #004236; */
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            color: #fff;
+        }
+
+        .subPage .hospitalContent figure>a {
+            box-shadow: inset 0 0 0 0 #4dc094;
+            color: #fff;
+            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        }
+
+        .subPage .hospitalContent figure>a:hover {
+            box-shadow: inset 100px 0 0 0 #4dc094;
+            color: white;
+        }
+
+        .subPage .hospitalContent .left {
+            position: relative;
+            padding: 0 0 0 30px;
+        }
+
+        .subPage .hospitalContent .left::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            display: block;
+            width: 5px;
+            height: 55px;
+            background: #004236;
+        }
+
+        .subPage .hospitalContent .left h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+
+        .subPage .hospitalContent .left p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .dotList {
+            line-height: 1.6;
+        }
+
+        .dotList>li {
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .dotList>li::before {
+            content: "";
+            display: inline-block;
+            height: 3px;
+            width: 3px;
+            background: #004236;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+        }
+
+        footer {
+            background: #004236;
+            height: 100px;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            padding-top: 70px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            <header class="logo"><img src="../img/tbs-logo.png" alt="">
+            </header>
+        </header>
+
+
+
+        <article class="subPage">
+            <section class="hospitalContent">
+                <h2>GIFT OUR ICONIC <span>SKINCARE</span> COLLECTIONS</h2>
+                <p>Healthy looking skin is always a win. Why not treat the Mother figure in your life to one our
+                    favourite skincare and bodycare collections.</p>
+
+                <div class="container">
+                    <div class="top">
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur</br>
+                                    adipisicing elit. Voluptatum, eum!</p>
+                            </div>
+                            <a href="#!">MORE</a>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur</br>
+                                    adipisicing elit. Voluptatum, eum!</p>
+                            </div>
+                            <a href="#!">MORE</a>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur</br>
+                                    adipisicing elit. Voluptatum, eum!</p>
+                            </div>
+                            <a href="#!">MORE</a>
+                        </figure>
+                        <figure>
+                            <div class="inner">
+                                <h3>Lorem, ipsum.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur</br>
+                                    adipisicing elit. Voluptatum, eum!</p>
+                            </div>
+                            <a href="#!">MORE</a>
+                        </figure>
+                    </div>
+                    <div class="left">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <ul class="right dotList">
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                    </ul>
+                </div>
+
+
+            </section>
+        </article>
+
+
+
+
+        <footer>
+            <p>&copy; Kim.</p>
+        </footer>
+    </div>
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+
+        $('.subPage .hospitalContent a').on('click', function () {
+            $(this).parent().toggleClass('on')
+        })
+
+    })
+</script>
+
+</html>
