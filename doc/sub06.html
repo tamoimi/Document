@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본으로 돌아가기 06</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+       header {
+           background: #004236;
+           height: 100px;
+       }
+       header .logo {
+           text-align: center;
+           padding-top: 25px;
+       }
+
+        #subPage .info___content {
+            padding: 100px 0;
+            letter-spacing: -0.025em;
+       }
+       #subPage .info___content h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+       }
+       #subPage .info___content h2::after {
+           content: "";
+           display: block;
+           width: 40px;
+           height: 2px;
+           background: #004236;
+           margin: 10px auto;
+       }
+       #subPage .info___content>p {
+           font-size: 15px;
+           font-weight: 500;
+           text-align: center;
+           margin: 0 0 50px 0;
+       }
+       #subPage .info___content .fixed___bg {
+           background: url(../img/2020-Q3-6_31_8-V3-HPC-200pc-DESKTOP.webp) no-repeat fixed center center/cover;
+           color: #fff;
+           text-align: center;
+           padding: 150px 0;
+           margin: 0 0 100px 0;
+        }
+        #subPage .info___content .fixed___bg strong {
+            display: block;
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+        }
+        #subPage .info___content .fixed___bg p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        #subPage .info___content .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto 100px auto;
+        }
+        #subPage .info___content .container figure {
+            padding: 0 15px;
+        }
+        #subPage .info___content .container .inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 20px 20px;
+            border-bottom: 5px solid #f00;
+        }
+        
+        #subPage .info___content .container .txt {
+            position: absolute;
+            top: calc(100% - 60px);
+            left: 0;
+            background: rgba(0,0,0,0.75);
+            color: #fff;
+            padding: 20px 15px;
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
+        }
+        #subPage .info___content .container .inner:hover .txt {
+            top: calc(100% - 160px);
+        }
+        #subPage .info___content .txt strong {
+            font-size: 30px;
+            font-weight: 900;
+        }
+        #subPage .info___content .txt strong::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            margin: 15px 0 25px 0 ;
+        }
+        #subPage .info___content figure:nth-child(1) strong {
+            color: #fff;
+        }
+        #subPage .info___content figure:nth-child(2) strong {
+            color: #fff;
+        }
+        #subPage .info___content figure:nth-child(3) strong {
+            color: #fff;
+        }
+        #subPage .info___content figure:nth-child(4) strong {
+            color: #fff;
+        }
+        #subPage .info___content figure:nth-child(5) strong {
+            color: #fff;
+        }
+        #subPage .info___content figure:nth-child(1) .inner {
+            border-color: #3a857e;
+        }
+        #subPage .info___content figure:nth-child(2) .inner {
+            border-color: #3a857e;
+        }
+        #subPage .info___content figure:nth-child(3) .inner {
+            border-color: #3a857e;
+        }
+        #subPage .info___content figure:nth-child(4) .inner {
+            border-color: #3a857e;
+        }
+        #subPage .info___content figure:nth-child(5) .inner {
+            border-color: #3a857e;
+        }
+        #subPage .info___content .danger {
+            width: 1170px;
+            margin: 0 auto;
+            background: #f3f3f3;
+            padding: 30px 20px;
+        }
+        #subPage .info___content .danger strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+        #subPage .info___content .danger i {
+            margin-right: 10px; 
+        }
+        #subPage .info___content .danger p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin: 0 0 30px 0;
+        }
+        #subPage .info___content .danger .list {
+            line-height: 1.6;
+        }
+        #subPage .info___content .danger .list li::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #004236;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 10px 0 0;
+        }
+
+
+       footer {
+           background: #004236;
+           height: 100px;
+       }
+      footer p {
+           text-align: center;
+           padding-top: 40px;
+           color: #fff;
+       }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header>
+            <div class="logo">
+                <img src="../img/tbs-logo.png" alt="">
+            </div>
+        </header>
+
+
+
+        <article id="subPage">
+            <section class="info___content">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia ducimus impedit!</p>
+                <div class="fixed___bg">
+                    <strong>"Lorem ipsum dolor sit amet consectetur."</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam mollitia ducimus impedit!</p>
+                </div>
+                <div class="container">
+                    <figure>
+                        <div class="inner">
+                        <img src="../img/tt03 (1).webp" alt="">
+                        <div class="txt">
+                            <strong>01</strong>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                        <img src="../img/tt03 (2).webp" alt="">
+                        <div class="txt">
+                            <strong>02</strong>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                        <img src="../img/tt03 (3).webp" alt="">
+                        <div class="txt">
+                            <strong>03</strong>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                        <img src="../img/tt04.webp" alt="">
+                        <div class="txt">
+                            <strong>04</strong>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    </figure>
+                    <figure>
+                        <div class="inner">
+                        <img src="../img/tt03 (1).webp" alt="">
+                        <div class="txt">
+                            <strong>04</strong>
+                            <h3>Lorem, ipsum dolor.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    </figure>
+    
+                
+            </div>
+                <div class="danger">
+                    <strong><i class="xi-close"></i> Lorem ipsum dolor sit amet.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam earum ratione accusamus nostrum omnis voluptas officia asperiores voluptatibus deserunt eaque?</p>
+                     <ul class="list">
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error!</li>
+                     </ul>
+                </div>
+            </section>
+        </article>
+
+
+
+
+        <footer>
+            <p>&copy; Kim.</p>
+        </footer>
+    </div>
+</body>
+
+
+</html>
